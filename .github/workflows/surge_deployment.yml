@@ -1,5 +1,3 @@
-# This is a basic workflow to help you get started with Actions
-
 name: react app deploy to surge
 
 # Controls when the action will run. Triggers the workflow on push or pull request
@@ -24,7 +22,8 @@ jobs:
       uses: actions/setup-node@v2-beta
       with:
         node-version: 12
-    - uses: borales/actions-yarn@v1.22.4
+    - name : yarn install
+      uses: borales/actions-yarn@v1.22.4
       with:
           cmd: install # will run `yarn install` command
 
